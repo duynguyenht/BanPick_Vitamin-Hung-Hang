@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ban Pick</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Sửa lại tên file CSS -->
+</head>
+
+<body>
+
+    <!-- Vùng chứa hình tiêu đề -->
+    <div class="header-container">
+        <img src="images/header-image.png" alt="Header Image" class="header-image">
+    </div>
+
+    <!-- Chữ "BAN" trên trái và bên phải -->
+    <div class="ban-left">BAN</div>
+    <div class="ban-right">BAN</div>
+    <div id="countdown" class="countdown"></div>
+    <div class="info-grid">
+        <div class="info-left">
+            <input type="text" id="info-left-input" placeholder="   ">
+        </div>
+        <div class="info-right">
+            <input type="text" id="info-right-input" placeholder="   ">
+        </div>
+    </div>
+
+    <!-- Khung chứa hình ảnh -->
+    <div class="image-frame">
+        <input type="text" id="search-input" placeholder="Tìm kiếm theo tên..." onkeyup="searchImages()">
+
+        <div class="image-grid">
+            <!-- Các nút hình ảnh -->
+
+            <button class="image-button" data-name="Arlecchino" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="Avatar/Arlecchino.jpg" alt="Image 1" class="image-item">
+            </button>
+            <button class="image-button" data-name="Dehya" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Dehya.jpg" alt="Image 2" class="image-item">
+            </button>
+            <button class="image-button" data-name="Diluc" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Diluc.jpg" alt="Image 3" class="image-item">
+            </button>
+            <button class="image-button" data-name="Klee" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Klee.jpg" alt="Image 4" class="image-item">
+            </button>
+            <button class="image-button" data-name="Lyney" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Lyney.jpg" alt="Image 5" class="image-item">
+            </button>
+            <button class="image-button" data-name="Hutao" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Hutao.jpg" alt="Image 6" class="image-item">
+            </button>
+            <button class="image-button" data-name="Yoimiya" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Yoimiya.jpg" alt="Image 7" class="image-item">
+            </button>
+            <button class="image-button" data-name="Bennett" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Bennett.jpg" alt="Image 8" class="image-item">
+            </button>
+            <button class="image-button" data-name="Xiangling" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Xiangling.jpg" alt="Image 9" class="image-item">
+            </button>
+            <button class="image-button" data-name="Chevreuse" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="Avatar/Chevreuse.jpg" alt="Image 10" class="image-item">
+            </button>
+            <button class="image-button" data-name="Gaming" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Gaming.jpg" alt="Image 11" class="image-item">
+            </button>
+            <button class="image-button" data-name="Amber" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Amber.jpg" alt="Image 12" class="image-item">
+            </button>
+            <button class="image-button" data-name="Xinyan" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Xinyan.jpg" alt="Image 13" class="image-item">
+            </button>
+            <button class="image-button" data-name="Yanfei" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Yanfei.jpg" alt="Image 14" class="image-item">
+            </button>
+            <button class="image-button" data-name="Furina" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Furina.jpg" alt="Image 15" class="image-item">
+            </button>
+            <button class="image-button" data-name="Sangonomiya" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Sangonomiya.jpg" alt="Image 16" class="image-item">
+            </button>
+            <button class="image-button" data-name="Neuvilet" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Neuvilet.jpg" alt="Image 17" class="image-item">
+            </button>
+            <button class="image-button" data-name="Nilou" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Nilou.jpg" alt="Image 18" class="image-item">
+            </button>
+            <button class="image-button" data-name="Sigewinne" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Sigewinne.jpg" alt="Image 19" class="image-item">
+            </button>
+            <button class="image-button" data-name="Yelan" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Yelan.jpg" alt="Image 20" class="image-item">
+            </button>
+            <button class="image-button" data-name="Ayato" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Ayato.jpg" alt="Image 21" class="image-item">
+            </button>
+            <button class="image-button" data-name="Mulani" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Mulani.jpg" alt="Image 22" class="image-item">
+            </button>
+            <button class="image-button" data-name="Mona" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Mona.jpg" alt="Image 23" class="image-item">
+            </button>
+            <button class="image-button" data-name="Xingqiu" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Xingqiu.jpg" alt="Image 24" class="image-item">
+            </button>
+            <button class="image-button" data-name="Barbara" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Barbara.jpg" alt="Image 25" class="image-item">
+            </button>
+            <button class="image-button" data-name="Candace" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Candace.jpg" alt="Image 26" class="image-item">
+            </button>
+            <button class="image-button" data-name="Kazuha" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Kazuha.jpg" alt="Image 27" class="image-item">
+            </button>
+            <button class="image-button" data-name="Xianyun" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Xianyun.jpg" alt="Image 28" class="image-item">
+            </button>
+            <button class="image-button" data-name="Xiao" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Xiao.jpg" alt="Image 29" class="image-item">
+            </button>
+
+            <button class="image-button" data-name="Venti" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Venti.jpg" alt="Image 30" class="image-item">
+            </button>
+
+            <button class="image-button" data-name="Mochi" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Mochi.jpg" alt="Image 31" class="image-item">
+            </button>
+
+            <button class="image-button" data-name="Jean" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Jean.jpg" alt="Image 32" class="image-item">
+            </button>
+
+            <button class="image-button" data-name="Sucrose" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Sucrose.jpg" alt="Image 33" class="image-item">
+            </button>
+
+            <button class="image-button" data-name="Sayu" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Sayu.jpg" alt="Image 34" class="image-item">
+            </button>
+
+            <button class="image-button" data-name="Lynette" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Lynette.jpg" alt="Image 35" class="image-item">
+            </button>
+
+            </button>
+            <button class="image-button" data-name="Heizou" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Heizou.jpg" alt="Image 36" class="image-item">
+            </button>
+            <button class="image-button" data-name="Faruzan" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Faruzan.jpg" alt="Image 37" class="image-item">
+            </button>
+            <button class="image-button" data-name="Clorine" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Clorine.jpg" alt="Image 38" class="image-item">
+            </button>
+            <button class="image-button" data-name="Cyno" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Cyno.jpg" alt="Image 39" class="image-item">
+            </button>
+            <button class="image-button" data-name="Yae" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Yae.jpg" alt="Image 40" class="image-item">
+            </button>
+            <button class="image-button" data-name="Raiden" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Raiden.jpg" alt="Image 41" class="image-item">
+            </button>
+            <button class="image-button" data-name="Keqing" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Keqing.jpg" alt="Image 42" class="image-item">
+            </button>
+            <button class="image-button" data-name="Sara" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Sara.jpg" alt="Image 43" class="image-item">
+            </button>
+            <button class="image-button" data-name="Shinobu" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Shinobu.jpg" alt="Image 44" class="image-item">
+            </button>
+            <button class="image-button" data-name="Fischl" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Fischl.jpg" alt="Image 45" class="image-item">
+            </button>
+            <button class="image-button" data-name="Beidou" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Beidou.jpg" alt="Image 46" class="image-item">
+            </button>
+            <button class="image-button" data-name="Lisa" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Lisa.jpg" alt="Image 47" class="image-item">
+            </button>
+            <button class="image-button" data-name="Sethos" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Sethos.jpg" alt="Image 48" class="image-item">
+            </button>
+            <button class="image-button" data-name="Dori" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Dori.jpg" alt="Image 49" class="image-item">
+            </button>
+            <button class="image-button" data-name="Razor" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Razor.jpg" alt="Image 50" class="image-item">
+            </button>
+            <button class="image-button" data-name="Ayaka" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Ayaka.jpg" alt="Image 51" class="image-item">
+            </button>
+            <button class="image-button" data-name="Wriothesley" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Wriothesley.jpg" alt="Image 52" class="image-item">
+            </button>
+            <button class="image-button" data-name="Ganyu" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Ganyu.jpg" alt="Image 53" class="image-item">
+            </button>
+            <button class="image-button" data-name="Eula" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Eula.jpg" alt="Image 54" class="image-item">
+            </button>
+            <button class="image-button" data-name="Shenhe" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Shenhe.jpg" alt="Image 55" class="image-item">
+            </button>
+            <button class="image-button" data-name="Qiqi" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Qiqi.jpg" alt="Image 56" class="image-item">
+            </button>
+            <button class="image-button" data-name="Aloy" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Aloy.jpg" alt="Image 57" class="image-item">
+            </button>
+            <button class="image-button" data-name="Charlotte" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Charlotte.jpg" alt="Image 58" class="image-item">
+            </button>
+            <button class="image-button" data-name="Diona" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Diona.jpg" alt="Image 59" class="image-item">
+            </button>
+            <button class="image-button" data-name="Rosaria" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Rosaria.jpg" alt="Image 60" class="image-item">
+            </button>
+            <button class="image-button" data-name="Layla" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Layla.jpg" alt="Image 61" class="image-item">
+            </button>
+            <button class="image-button" data-name="Chongyun" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Chongyun.jpg" alt="Image 62" class="image-item">
+            </button>
+            <button class="image-button" data-name="Kaeya" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Kaeya.jpg" alt="Image 63" class="image-item">
+            </button>
+            <button class="image-button" data-name="Freminet" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Freminet.jpg" alt="Image 64" class="image-item">
+            </button>
+            <button class="image-button" data-name="Mika" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Mika.jpg" alt="Image 65" class="image-item">
+            </button>
+            <button class="image-button" data-name="Emilie" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Emilie.jpg" alt="Image 66" class="image-item">
+            </button>
+            <button class="image-button" data-name="Kinich" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Kinich.jpg" alt="Image 67" class="image-item">
+            </button>
+            <button class="image-button" data-name="Alhaitham" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Alhaitham.jpg" alt="Image 68" class="image-item">
+            </button>
+            <button class="image-button" data-name="Nahida" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Nahida.jpg" alt="Image 69" class="image-item">
+            </button>
+            <button class="image-button" data-name="Tighnari" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Tighnari.jpg" alt="Image 70" class="image-item">
+            </button>
+            <button class="image-button" data-name="Baizhu" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Baizhu.jpg" alt="Image 71" class="image-item">
+            </button>
+            <button class="image-button" data-name="Kirara" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Kirara.jpg" alt="Image 72" class="image-item">
+            </button>
+            <button class="image-button" data-name="Kaveh" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Kaveh.jpg" alt="Image 73" class="image-item">
+            </button>
+            <button class="image-button" data-name="Yaoyao" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Yaoyao.jpg" alt="Image 74" class="image-item">
+            </button>
+            <button class="image-button" data-name="Collei" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Collei.jpg" alt="Image 75" class="image-item">
+            </button>
+            <button class="image-button" data-name="Zhongli" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Zhongli.jpg" alt="Image 76" class="image-item">
+            </button>
+            <button class="image-button" data-name="Albedo" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Albedo.jpg" alt="Image 77" class="image-item">
+            </button>
+            <button class="image-button" data-name="Itto" onclick="END('/Character/Emilie 6.mp4')">
+                <img src="avatar/Itto.jpg" alt="Image 78" class="image-item">
+            </button>
+            <button class="image-button" data-name="Navia" onclick="updateMediafinal('/Character/Emilie 6.mp4')">
+                <img src="avatar/Navia.jpg" alt="Image 79" class="image-item">
+            </button>
+            <button class="image-button" data-name="Chiori" onclick="updateMediafinal('/Character/Emilie 6.mp4')">
+                <img src="avatar/Chiori.jpg" alt="Image 80" class="image-item">
+            </button>
+            <button class="image-button" data-name="Kachina" onclick="updateMediafinal('/Character/Emilie 6.mp4')">
+                <img src="avatar/Kachina.jpg" alt="Image 81" class="image-item">
+            </button>
+            <button class="image-button" data-name="Gorou" onclick="updateMediafinal('/Character/Emilie 6.mp4')">
+                <img src="avatar/Gorou.jpg" alt="Image 82" class="image-item">
+            </button>
+            <button class="image-button" data-name="Ningguang" onclick="updateMediafinal('/Character/Emilie 6.mp4')">
+                <img src="avatar/Ningguang.jpg" alt="Image 83" class="image-item">
+            </button>
+            <button class="image-button" data-name="Yun Jin" onclick="updateMediafinal('/Character/Emilie 6.mp4')">
+                <img src="avatar/Yun Jin.jpg" alt="Image 84" class="image-item">
+            </button>
+            <button class="image-button" data-name="Noelle" onclick="updateMediafinal('/Character/Emilie 6.mp4')">
+                <img src="avatar/Noelle.jpg" alt="Image 85" class="image-item">
+            </button>
+            <button class="image-button" data-name="AthearXLumine"
+                onclick="updateMediafinal('/Character/Emilie 6.mp4')">
+                <img src="avatar/AthearXLumine.jpg" alt="Image 86" class="image-item">
+            </button>
+
+
+            </button>
+        </div>
+    </div>
+
+
+
+    <!-- Khung chứa nút -->
+    <div class="additional-image-frame">
+        <button class="image-button-chucnang" onclick="moveImage()">
+            <img src="images/Funticon/Pick.png" alt="Image 14" class="image-item">
+        </button>
+        <button class="image-button-chucnang" onclick="removeImage()">
+            <img src="images/Funticon/Xoa.png" alt="Image 14" class="image-item">
+        </button>
+
+        <button class="image-button-chucnang" onclick="startCountdown()">
+            <img src="images/Funticon/Time.png" alt="Image 14" class="image-item">
+        </button>
+        <button id="swapButton" class="image-button-chucnang" onclick="startCountdown()">
+            <img src="/images/Funticon/Swap.png" alt="Image 14" class="image-item">
+        </button>
+
+        <button class="image-button-chucnang" onclick="banImage()">
+            <img src="/images/Funticon/Ban.png" alt="Image 14" class="image-item">
+        </button>
+    </div>
+
+    <!-- Nút Fullscreen ở góc phải -->
+    <button class="image-button-chucnang fullscreen-button" id="fullscreen-button">
+        <img src="Avatar/Furina.jpg" alt=" " class="image-item">
+    </button>
+
+
+
+
+    <!-- Khung chứa khung grid bên trái  -->
+    <div class="container">
+        <div class="left-container">
+            <div class="new-grid">
+                <div class="grid-item" id="grid1"></div>
+                <div class="grid-item" id="grid2"></div>
+                <div class="grid-item" id="grid3"></div>
+                <div class="grid-item" id="grid4"></div>
+                <div class="grid-item" id="grid5"></div>
+                <div class="grid-item" id="grid6"></div>
+                <div class="grid-item" id="grid7"></div>
+                <div class="grid-item" id="grid8"></div>
+            </div>
+        </div>
+        <!-- Thêm phần grid bên phải -->
+        <div class="right-container">
+            <div class="new-grid-right">
+                <div class="grid-item-right" id="right-grid1"></div>
+                <div class="grid-item-right" id="right-grid2"></div>
+                <div class="grid-item-right" id="right-grid3"></div>
+                <div class="grid-item-right" id="right-grid4"></div>
+                <div class="grid-item-right" id="right-grid5"></div>
+                <div class="grid-item-right" id="right-grid6"></div>
+                <div class="grid-item-right" id="right-grid7"></div>
+                <div class="grid-item-right" id="right-grid8"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Khung rỗng nằm phía sau khung .image-frame -->
+    <div class="empty-frame">
+        <img id="empty-frame-img" src="" alt="">
+        <video id="empty-frame-video" controls autoplay></video>
+    </div>
+
+    <!-- Khung chứa BAN Trai -->
+
+    <div class="grid-container">
+        <div class="grid-left">
+            <div class="grid-wrapper">
+                <div class="grid-cell" id="cell1"></div>
+                <div class="grid-cell" id="cell2"></div>
+            </div>
+            <!-- Phần grid bên phải -->
+            <div class="grid-right">
+                <div class="grid-wrapper-right">
+                    <div class="grid-cell-right" id="right-cell1"></div>
+                    <div class="grid-cell-right" id="right-cell2"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts.js"></script> <!-- Sửa lại tên file JS -->
+</body>
+
+</html>
