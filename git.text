@@ -1,5 +1,0 @@
-http://127.0.0.1:5500/index.html
-git push --set-upstream origin master
-git status
-git add .
-git commit -m "update version"
