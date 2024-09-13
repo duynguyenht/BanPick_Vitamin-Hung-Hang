@@ -91,6 +91,7 @@ body {
 
 /* Định dạng grid thông tin */
 .info-grid {
+    display: flex;
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* Tạo hai cột có kích thước bằng nhau */
@@ -114,6 +115,7 @@ body {
 /* Định dạng chữ "BAN" */
 .ban-left,
 .ban-right {
+    display: flex;
     position: absolute;
     /* Đặt vị trí tuyệt đối */
     font-weight: bold;
