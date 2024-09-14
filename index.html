@@ -42,6 +42,7 @@
                 <div>
                     <h1 class="ban1">Ban</h1>
                 </div>
+
                 <div>
                     <h1 class="ban2">Ban</h1>
                 </div>
@@ -88,6 +89,7 @@
                             <div class="grid-item" id="grid8"></div>
                         </div>
                     </div>
+
                     <!-- Thêm phần grid bên phải -->
                     <div class="right-container">
                         <div class="new-grid-right">
@@ -110,18 +112,25 @@
                 <!-- Khung chứa hình ảnh -->
                 <div class="image-frame">
                     <input type="text" id="search-input" placeholder="Tìm kiếm theo tên..." onkeyup="searchImages()">
+                    <!-- Khung chứa nút chuc nang-->
+                    <button class="image-button-chucnang">
+                        <img src="./pug/Xoa.png" alt="Image 14" class="image-item">
+                    </button>
+                    <button class="chucnang-reset" onclick="resetPage()">
+                        <img src="./pug/reset.png" alt="Image 14" class="image-item">
+                    </button>
                     <div class="image-grid">
                         <!-- Các nút hình ảnh -->
-                        <button class="image-button" data-name="Arlecchino" onclick="END('/Character/Neuvilet.mp4')">
+                        <button class="image-button" data-name="Arlecchino" onclick="END('./video/neuvilet.mp4')">
                             <img src="avatar/Arlecchino.jpg" alt="Image 1" class="image-item">
                         </button>
-                        <button class="image-button" data-name="Dehya" onclick="END('/Character/Emilie 6.mp4')">
+                        <button class="image-button" data-name="Dehya" onclick="END('./video/emilie.mp4')">
                             <img src="avatar/Dehya.jpg" alt="Image 2" class="image-item">
                         </button>
-                        <button class="image-button" data-name="Diluc" onclick="END('/Character/Emilie 6.mp4')">
+                        <button class="image-button" data-name="Diluc" onclick="END('/video/emilie.mp4')">
                             <img src="avatar/Diluc.jpg" alt="Image 3" class="image-item">
                         </button>
-                        <button class="image-button" data-name="Klee" onclick="END('/Character/Emilie 6.mp4')">
+                        <button class="image-button" data-name="Klee" onclick="END('/video/emilie.mp4')">
                             <img src="avatar/Klee.jpg" alt="Image 4" class="image-item">
                         </button>
                         <button class="image-button" data-name="Lyney" onclick="END('/Character/Emilie 6.mp4')">
@@ -388,7 +397,7 @@
                         </button>
                     </div>
 
-                </div> <!-- div Down -->
+                </div> <!-- div Nut hinh anh -->
 
             </div> <!-- div Down -->
 

@@ -41,7 +41,7 @@ body {
 }
 
 .Background {
-    background-image: url('images/Backgroundmain4.png');
+    background-image: url('images/Background/Background.png');
     /* Thay 'path/to/your-image.jpg' bằng đường dẫn thực tế tới hình ảnh của bạn */
     background-size: cover;
     /* Làm cho hình ảnh bao phủ toàn bộ div */
@@ -81,6 +81,7 @@ body {
     margin-right: 300px;
     /* Khoảng cách giữa 2 chữ */
     /* Có thể điều chỉnh vị trí bằng margin hoặc padding */
+    color: white;
 }
 
 .ban2 {
@@ -88,6 +89,7 @@ body {
     margin-right: 0px;
     /* Khoảng cách giữa 2 chữ */
     /* Có thể điều chỉnh vị trí bằng margin hoặc padding */
+    color: white;
 }
 
 
@@ -161,7 +163,7 @@ body {
     /* Đặt chiều cao cố định cho khung chứa hình ảnh */
     overflow-y: auto;
     /* Cho phép cuộn dọc khi có nhiều hình ảnh */
-    border: 2px solid #6a43ae;
+    border: px solid #6a43ae;
     /* Đặt viền cho khung */
     padding: 20px;
     /* Padding cho khung */
@@ -170,6 +172,7 @@ body {
     top: 0;
     /* Đặt từ trên cùng xuống giữa trang */
     left: 0;
+    background-color: rgba(16, 17, 15, 0.6);
     /* Đặt từ bên trái ra giữa trang */
     transform: translate(1%, -10%);
     /* Căn giữa khung theo cả chiều dọc và chiều ngang */
@@ -193,7 +196,7 @@ body {
     left: 300px;
     right: 285px;
     bottom: 100px;
-    border: 3px solid #ccc;
+    border: px solid #ccc;
     /* Đã thêm kích thước viền */
     box-sizing: border-box;
     z-index: 0;
@@ -243,6 +246,7 @@ body {
     /* Chiếm toàn bộ chiều rộng của phần tử chứa */
     max-width: 300px;
     /* Chiều rộng tối đa */
+    height: 30px;
     padding: 10px;
     /* Khoảng cách bên trong */
     border: 1px solid #ccc;
@@ -455,7 +459,7 @@ body {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    width: 150px;
+    width: 200px;
     /* Đặt chiều rộng cụ thể hoặc auto nếu không cần */
     height: 77px;
     /* Đặt chiều cao cụ thể */
@@ -474,7 +478,7 @@ body {
     padding: 0;
     margin: 0;
     position: absolute;
-    left: 1116px;
+    left: 1080px;
     top: 101px;
     height: auto;
     width: auto;
@@ -501,13 +505,12 @@ body {
 
 /* Định dạng cho các item trong grid bên phải */
 .grid-item-right {
-    border: px solid #ccc;
     padding: 20px;
     /* Padding bên trong khung */
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    width: 150px;
+    width: 200px;
     /* Đặt chiều rộng cụ thể hoặc auto nếu không cần */
     height: 77px;
     /* Đặt chiều cao cụ thể */
@@ -606,4 +609,81 @@ input[type="text"]:focus {
     /* Bóng đổ khi focus */
     outline: none;
     /* Loại bỏ viền mặc định khi focus */
+}
+
+
+.image-button-chucnang {
+    background: rgba(37, 35, 35, 0.5);
+    /* Nền màu đen với độ mờ 50% */
+    border-radius: 4px;
+    /* Bo góc cho nền */
+    border: 4px solid #ffffff;
+    /* Viền trắng xung quanh nút */
+    padding: 2px;
+    /* Padding để tạo khoảng cách giữa viền và hình ảnh */
+    cursor: pointer;
+    /* Đặt con trỏ thành pointer khi di chuột qua nút */
+    display: inline-block;
+    /* Đặt các nút hình ảnh nằm ngang */
+    margin: 8px;
+    /* Khoảng cách giữa các nút hình ảnh */
+    transition: background 0.3s ease, border 0.3s ease;
+    /* Hiệu ứng chuyển đổi mượt mà cho nền và viền */
+    position: relative;
+    /* Đặt vị trí tương đối để dễ dàng áp dụng hiệu ứng */
+}
+
+/* Định dạng cho hình ảnh trong nút */
+.image-button-chucnang img {
+    width: 56px;
+    /* Đặt chiều rộng cố định cho hình ảnh */
+    height: 30px;
+    /* Đặt chiều cao cố định cho hình ảnh */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh giữ tỷ lệ khi thay đổi kích thước */
+    border-radius: 60px;
+    /* Bo góc cho hình ảnh */
+}
+
+/* Hiệu ứng chớp chớp khi nhấn nút */
+.image-button-chucnang:active {
+    animation: flash 0.5s ease;
+    /* Thêm hiệu ứng flash khi nhấn */
+}
+
+.chucnang-reset {
+    background: rgba(37, 35, 35, 0.5);
+    /* Nền màu đen với độ mờ 50% */
+    border-radius: 50px;
+    /* Bo góc cho nền */
+    border: px solid #ffffff;
+    /* Viền trắng xung quanh nút */
+    padding: 2px;
+    /* Padding để tạo khoảng cách giữa viền và hình ảnh */
+    cursor: pointer;
+    /* Đặt con trỏ thành pointer khi di chuột qua nút */
+    display: inline-block;
+    /* Đặt các nút hình ảnh nằm ngang */
+    margin: 8px;
+    /* Khoảng cách giữa các nút hình ảnh */
+    transition: background 0.3s ease, border 0.3s ease;
+    /* Hiệu ứng chuyển đổi mượt mà cho nền và viền */
+    position: relative;
+    /* Đặt vị trí tương đối để dễ dàng áp dụng hiệu ứng */
+}
+
+.chucnang-reset img {
+    width: 30px;
+    /* Đặt chiều rộng cố định cho hình ảnh */
+    height: 30px;
+    /* Đặt chiều cao cố định cho hình ảnh */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh giữ tỷ lệ khi thay đổi kích thước */
+    border-radius: 50px;
+    /* Bo góc cho hình ảnh */
+}
+
+.chucnang-reset:active {
+    animation: flash 0.5s ease;
+    /* Thêm hiệu ứng flash khi nhấn */
 }

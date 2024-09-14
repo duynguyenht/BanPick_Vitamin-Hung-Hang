@@ -238,7 +238,17 @@ function makeButtonOpaque() {
 
 // Gọi hàm để làm mờ nút
 makeButtonOpaque();
+function resetPage() {
+    // Xóa toàn bộ dữ liệu lưu trữ trong localStorage hoặc sessionStorage (nếu có)
+    localStorage.clear();
+    sessionStorage.clear();
 
+    // Xóa tất cả các input field trong trang (nếu có)
+    document.querySelectorAll('input').forEach(input => input.value = '');
+
+    // Làm mới lại toàn bộ trang
+    location.reload(); 
+}
 
 // Dữ liệu các nhân vật (đã cập nhật)
 const characters = [
@@ -331,25 +341,3 @@ const characters = [
       
 
 ];
-
-// Hàm để tạo nút từ dữ liệu
-function createButtons() {
-    const container = document.getElementById('CallButtons');
-    
-    characters.forEach(character => {
-        const button = document.createElement('button');
-        button.className = 'image-button';
-        button.setAttribute('data-name', character.name);
-        button.onclick = () => END(character.videoSrc);
-
-        const img = document.createElement('img');
-        img.src = character.imgSrc;
-        img.alt = `Image of ${character.name}`;
-        img.className = 'image-item';
-
-        button.appendChild(img);
-        container.appendChild(button);
-    });
-}
-// Gọi hàm để tạo các nút
-createButtons();
