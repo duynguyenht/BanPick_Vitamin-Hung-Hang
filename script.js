@@ -243,8 +243,8 @@ makeButtonOpaque();
 // Dữ liệu các nhân vật (đã cập nhật)
 const characters = [
   
-        { name: "Arlecchino", imgSrc: "avatar/Arlecchino.jpg", videoSrc: "/Character/Emilie 6.mp4" },
-        { name: "Dehya", imgSrc: "avatar/Dehya.jpg", videoSrc: "/Character/Emilie 6.mp4" },
+        { name: "Arlecchino", imgSrc: "avatar/Arlecchino.jpg", videoSrc: "/Character/Furina" },
+        { name: "Dehya", imgSrc: "avatar/Dehya.jpg", videoSrc: "/Character/Emilie 2.mp4" },
         { name: "Diluc", imgSrc: "avatar/Diluc.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Klee", imgSrc: "avatar/Klee.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Lyney", imgSrc: "avatar/Lyney.jpg", videoSrc: "/Character/Emilie 6.mp4" },
@@ -259,7 +259,7 @@ const characters = [
         { name: "Yanfei", imgSrc: "/Avatar/Yanfei.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Furina", imgSrc: "/Avatar/Furina.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Sangonomiya", imgSrc: "/Avatar/Sangonomiya.jpg", videoSrc: "/Character/Emilie 6.mp4" },
-        { name: "Neuvilet", imgSrc: "/Avatar/Neuvilet.jpg", videoSrc: "/MP4/Neuvilet.mp4" },
+        { name: "Neuvilet", imgSrc: "/Avatar/Neuvilet.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Nilou", imgSrc: "/Avatar/Nilou.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Sigewinne", imgSrc: "/Avatar/Sigewinne.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Yelan", imgSrc: "/Avatar/Yelan.jpg", videoSrc: "/Character/Emilie 6.mp4" },
@@ -308,7 +308,7 @@ const characters = [
         { name: "Kaeya", imgSrc: "/Avatar/Kaeya.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Freminet", imgSrc: "/Avatar/Freminet.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Mika", imgSrc: "/Avatar/Mika.jpg", videoSrc: "/Character/Emilie 6.mp4" },
-        { name: "Emilie", imgSrc: "/Avatar/Emilie.jpg", videoSrc: "/MP4/Emile.mp4" },
+        { name: "Emilie", imgSrc: "/Avatar/Emilie.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Kinich", imgSrc: "/Avatar/Kinich.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Alhaitham", imgSrc: "/Avatar/Alhaitham.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Nahida", imgSrc: "/Avatar/Nahida.jpg", videoSrc: "/Character/Emilie 6.mp4" },
