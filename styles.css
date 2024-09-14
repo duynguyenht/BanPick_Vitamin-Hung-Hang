@@ -15,7 +15,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
- 
+
 }
 
 
@@ -76,15 +76,17 @@ body {
     /* Khoảng cách bên trong thẻ */
 }
 
-.ban1{
+.ban1 {
     display: inline-block;
-    margin-right: 300px; /* Khoảng cách giữa 2 chữ */
+    margin-right: 300px;
+    /* Khoảng cách giữa 2 chữ */
     /* Có thể điều chỉnh vị trí bằng margin hoặc padding */
 }
 
 .ban2 {
     display: inline-block;
-    margin-right: 0px; /* Khoảng cách giữa 2 chữ */
+    margin-right: 0px;
+    /* Khoảng cách giữa 2 chữ */
     /* Có thể điều chỉnh vị trí bằng margin hoặc padding */
 }
 
@@ -180,7 +182,9 @@ body {
     /* ấn vào hiện lên */
     z-index: 10;
     /* Đặt z-index cao hơn để nằm trên khung .empty-frame */
-}.empty-frame {
+}
+
+.empty-frame {
     width: 54.4%;
     /* Đặt chiều rộng của khung chứa hình ảnh */
     height: 520px;
@@ -188,8 +192,9 @@ body {
     top: 100px;
     left: 300px;
     right: 285px;
-    bottom:100px;
-    border: 3px solid #ccc; /* Đã thêm kích thước viền */
+    bottom: 100px;
+    border: 3px solid #ccc;
+    /* Đã thêm kích thước viền */
     box-sizing: border-box;
     z-index: 0;
     overflow: hidden;
@@ -201,7 +206,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center; 
+    object-position: center;
 
     /* Maintain aspect ratio and fit inside */
 }
@@ -512,10 +517,13 @@ body {
     /* Đảm bảo padding không làm thay đổi kích thước */
 }
 
-.grid-wrapper{
-    display: flex; /* Xếp các phần tử con nằm ngang */
-    justify-content: space-between; /* Khoảng cách giữa các ô (nếu muốn khoảng cách đều) */
+.grid-wrapper {
+    display: flex;
+    /* Xếp các phần tử con nằm ngang */
+    justify-content: space-between;
+    /* Khoảng cách giữa các ô (nếu muốn khoảng cách đều) */
 }
+
 .grid-cell {
     width: 60px;
     /* Đặt kích thước cho các grid-item */
@@ -530,15 +538,19 @@ body {
     /* Đảm bảo hình ảnh vừa khít */
     background-position: center;
     /* Căn giữa hình ảnh */
-    margin: 10px; /* Khoảng cách giữa các ô (có thể điều chỉnh) */
+    margin: 10px;
+    /* Khoảng cách giữa các ô (có thể điều chỉnh) */
 
 }
 
 .grid-wrapper-right {
-    display: flex; /* Xếp các phần tử con nằm ngang */
-    justify-content: space-between; /* Khoảng cách giữa các ô (nếu muốn khoảng cách đều) */
+    display: flex;
+    /* Xếp các phần tử con nằm ngang */
+    justify-content: space-between;
+    /* Khoảng cách giữa các ô (nếu muốn khoảng cách đều) */
 }
-.grid-cell-right {  
+
+.grid-cell-right {
     width: 60px;
     /* Đặt kích thước cho các grid-item */
     height: 60px;
@@ -552,28 +564,46 @@ body {
     /* Đảm bảo hình ảnh vừa khít */
     background-position: center;
     /* Căn giữa hình ảnh */
-    margin: 10px; /* Khoảng cách giữa các ô (có thể điều chỉnh) */
+    margin: 10px;
+    /* Khoảng cách giữa các ô (có thể điều chỉnh) */
 
 }
+
 input[type="text"] {
-    width: 100%; /* Chiều rộng của text box, bạn có thể thay đổi theo nhu cầu */
-    max-width: 130px; /* Độ rộng tối đa của text box */
-    padding: 10px; /* Khoảng cách giữa nội dung và viền */
-    border-radius: 5px; /* Bo tròn góc */
-    border: 1px solid #ccc; /* Màu viền */
-    font-size: 1.5em; /* Kích thước chữ giống như h1 */
-    font-weight: bold; /* In đậm chữ */
-    margin-bottom: 0px; /* Khoảng cách dưới giữa các text box */
-    margin-right: 15px; /* Căn giữa theo chiều ngang */
-    margin-left: 15px; /* Căn giữa theo chiều ngang */
-    background-color: #f9f9f9; /* Màu nền */
-    color: #13ce22; /* Màu chữ */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển đổi cho viền và bóng */
+    width: 100%;
+    /* Chiều rộng của text box, bạn có thể thay đổi theo nhu cầu */
+    max-width: 130px;
+    /* Độ rộng tối đa của text box */
+    padding: 10px;
+    /* Khoảng cách giữa nội dung và viền */
+    border-radius: 5px;
+    /* Bo tròn góc */
+    border: 1px solid #ccc;
+    /* Màu viền */
+    font-size: 1.5em;
+    /* Kích thước chữ giống như h1 */
+    font-weight: bold;
+    /* In đậm chữ */
+    margin-bottom: 0px;
+    /* Khoảng cách dưới giữa các text box */
+    margin-right: 15px;
+    /* Căn giữa theo chiều ngang */
+    margin-left: 15px;
+    /* Căn giữa theo chiều ngang */
+    background-color: #f9f9f9;
+    /* Màu nền */
+    color: #13ce22;
+    /* Màu chữ */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Hiệu ứng chuyển đổi cho viền và bóng */
 }
 
 /* Hiệu ứng khi focus vào text box */
 input[type="text"]:focus {
-    border-color: #007bff; /* Màu viền khi focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Bóng đổ khi focus */
-    outline: none; /* Loại bỏ viền mặc định khi focus */
+    border-color: #007bff;
+    /* Màu viền khi focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Bóng đổ khi focus */
+    outline: none;
+    /* Loại bỏ viền mặc định khi focus */
 }
