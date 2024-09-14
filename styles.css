@@ -60,7 +60,7 @@ body {
     width: 1280px;
     /* Chiều rộng mặc định của hình chữ nhật */
     height: 100px;
-    background-color: rgba(231, 105, 47, 0.6);
+    background-color: rgba(231, 105, 47, 0.0);
     border-radius: 8px;
     /* Tùy chọn bo tròn các góc */
     display: flex;
