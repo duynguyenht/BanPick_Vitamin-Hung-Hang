@@ -172,7 +172,7 @@ body {
     top: 0;
     /* Đặt từ trên cùng xuống giữa trang */
     left: 0;
-    background-color: rgba(16, 17, 15, 0.6);
+    background-color: rgba(16, 17, 15, 0.9);
     /* Đặt từ bên trái ra giữa trang */
     transform: translate(1%, -10%);
     /* Căn giữa khung theo cả chiều dọc và chiều ngang */
