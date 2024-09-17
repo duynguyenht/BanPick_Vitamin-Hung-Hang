@@ -41,7 +41,7 @@ body {
 }
 
 .Background {
-    background-image: url('images/Background/Background.png');
+    background-image: url('images/Background/Background_1.png');
     /* Thay 'path/to/your-image.jpg' bằng đường dẫn thực tế tới hình ảnh của bạn */
     background-size: cover;
     /* Làm cho hình ảnh bao phủ toàn bộ div */
@@ -172,7 +172,7 @@ body {
     top: 0;
     /* Đặt từ trên cùng xuống giữa trang */
     left: 0;
-    background-color: rgba(16, 17, 15, 0.9);
+    background-color: rgba(16, 17, 15, 0.5);
     /* Đặt từ bên trái ra giữa trang */
     transform: translate(1%, -10%);
     /* Căn giữa khung theo cả chiều dọc và chiều ngang */
@@ -417,7 +417,7 @@ body {
     /* Đặt vị trí của container */
     top: 101px;
     /* Căn lề trên, điều chỉnh theo yêu cầu */
-    left: 0px;
+    left: 30px;
     /* Căn lề trái */
     height: auto;
     /* Đặt chiều cao tự động hoặc có thể đặt cố định */
@@ -459,7 +459,7 @@ body {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    width: 200px;
+    width: 250px;
     /* Đặt chiều rộng cụ thể hoặc auto nếu không cần */
     height: 77px;
     /* Đặt chiều cao cụ thể */
@@ -478,7 +478,7 @@ body {
     padding: 0;
     margin: 0;
     position: absolute;
-    left: 1080px;
+    left: 1050px;
     top: 101px;
     height: auto;
     width: auto;
@@ -583,7 +583,7 @@ input[type="text"] {
     /* Bo tròn góc */
     border: 1px solid #ccc;
     /* Màu viền */
-    font-size: 1.5em;
+    font-size: 1.2em;
     /* Kích thước chữ giống như h1 */
     font-weight: bold;
     /* In đậm chữ */
@@ -595,7 +595,7 @@ input[type="text"] {
     /* Căn giữa theo chiều ngang */
     background-color: #f9f9f9;
     /* Màu nền */
-    color: #13ce22;
+    color: #fcfcfc;
     /* Màu chữ */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     /* Hiệu ứng chuyển đổi cho viền và bóng */
