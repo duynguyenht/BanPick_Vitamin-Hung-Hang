@@ -453,13 +453,26 @@ body {
 
 .grid-item {
 
-    border: px solid #ccc;
+    /*border: px solid #ccc;
+    padding: 20px;
+    /* Padding bên trong khung 
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 250px;
+    /* Đặt chiều rộng cụ thể hoặc auto nếu không cần 
+    height: 77px;
+    /* Đặt chiều cao cụ thể 
+    margin: px 0;
+    /* Khoảng cách trên và dưới giữa các khung 
+    box-sizing: border-box;
+     Đảm bảo padding không làm thay đổi kích thước */
     padding: 20px;
     /* Padding bên trong khung */
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    width: 250px;
+    width: 200px;
     /* Đặt chiều rộng cụ thể hoặc auto nếu không cần */
     height: 77px;
     /* Đặt chiều cao cụ thể */
@@ -467,6 +480,7 @@ body {
     /* Khoảng cách trên và dưới giữa các khung */
     box-sizing: border-box;
     /* Đảm bảo padding không làm thay đổi kích thước */
+
 
 }
 
@@ -595,7 +609,7 @@ input[type="text"] {
     /* Căn giữa theo chiều ngang */
     background-color: #f9f9f9;
     /* Màu nền */
-    color: #fcfcfc;
+    color: #fd0000;
     /* Màu chữ */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     /* Hiệu ứng chuyển đổi cho viền và bóng */
