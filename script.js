@@ -338,6 +338,9 @@ const characters = [
         { name: "Ningguang", imgSrc: "/Avatar/Ningguang.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Yun Jin", imgSrc: "/Avatar/Yun Jin.jpg", videoSrc: "/Character/Emilie 6.mp4" },
         { name: "Noelle", imgSrc: "/Avatar/Noelle.jpg", videoSrc: "/Character/Emilie 6.mp4" },
-      
-
 ];
+
+function live() {
+    // Điều hướng đến file HTML khác trong thư mục
+    window.location.href = './Discord/index.html';  // Thay đổi đường dẫn đúng với file HTML của bạn
+}
