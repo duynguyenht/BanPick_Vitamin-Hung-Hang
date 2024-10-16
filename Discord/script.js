@@ -106,7 +106,7 @@ function saveTime() {
 
 // Thêm sự kiện cho các nút
 document.getElementById('startTimerBtn').addEventListener('click', function() {
-    startTimer(15); // Ví dụ: Hẹn giờ 5 phút
+    startTimer(15); 
 });
 
 document.getElementById('stopTimerBtn').addEventListener('click', stopTimer); // Thay đổi để chỉ tạm dừng
