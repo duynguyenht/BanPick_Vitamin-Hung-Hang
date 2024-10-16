@@ -11,13 +11,22 @@
     <!-- Div trên -->
     <div class="top-container">
         <div class="controls">
-
-            <button id="customBtn">Custom</button>
             <button id="shareBtn">Share</button>
             <button id="startTimerBtn">Start</button>
-            <div id="timer">05:00</div>
+            <button id="stopTimerBtn">Stop</button> <!-- Giữ nguyên tên là Stop -->
+            <button id="resetTimerBtn">Reset</button>
+            <button id="saveTimeBtn">Finish</button> <!-- Nút Save Time -->
+            <div id="timer">15:00</div>
+            
+        </div>
+        <div id="timeLog" class="time-log">
+            <h3>Thời gian hoàn thành</h3>
+            <div>Player 1: <span id="firstStop">0</span> Giây</div>
+            <div>Player 2: <span id="secondStop">0</span> Giây</div>
+            <div>Chênh lệch: <span id="timeDifference">0</span> Giây</div>
         </div>
     </div>
+    
     <!-- Div dưới -->
     <div class="bottom-container">
         <div class="video-container">
