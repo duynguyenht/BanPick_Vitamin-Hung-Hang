@@ -103,5 +103,5 @@ button:focus {
   box-shadow: 0 0 5px rgba(24, 181, 45, 0.5); /* Hiệu ứng bóng khi focus */
 }
 .short-input {
-  width: 50px; /* Chiều rộng ngắn hơn cho các ô nhập */
+  width: 51px; /* Chiều rộng ngắn hơn cho các ô nhập */
 }
