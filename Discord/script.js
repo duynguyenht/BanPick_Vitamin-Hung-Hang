@@ -146,3 +146,24 @@ document.getElementById('stopTimerBtn').addEventListener('click', stopTimer); //
 document.getElementById('resetTimerBtn').addEventListener('click', resetTimer);
 document.getElementById('saveTimeBtn').addEventListener('click', saveTime);
 
+
+// Hàm để tính toán sự khác biệt giữa Player 1 và Player 2
+function calculateDifference() {
+    const player1Value = parseFloat(document.getElementById('player1Input').value) || 0;
+    const player2Value = parseFloat(document.getElementById('player2Input').value) || 0;
+
+    const player1Result = player1Value * 5; // Nhân số của Player 1 với 5
+    const player2Result = player2Value * 5; // Nhân số của Player 2 với 5
+
+    // Cập nhật kết quả cho Player 1 và Player 2
+    document.getElementById('player1Result').textContent =   player1Result + " Giây: ";
+    document.getElementById('player2Result').textContent =  player2Result + " Giây: ";
+
+    // Tính và hiển thị sự khác biệt
+    const timeDifference = Math.abs(player1Result - player2Result); // Lấy giá trị tuyệt đối
+    document.getElementById('timeDifference').textContent = timeDifference;
+}
+
+// Thêm sự kiện input cho các ô nhập
+document.getElementById('player1Input').addEventListener('input', calculateDifference);
+document.getElementById('player2Input').addEventListener('input', calculateDifference);

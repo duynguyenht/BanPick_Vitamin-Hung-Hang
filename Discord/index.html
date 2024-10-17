@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thi Đấu</title>
 
-  <!-- Gắn CSS bên ngoài -->
-  <link href="styles.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thi Đấu</title>
+
+    <!-- Gắn CSS bên ngoài -->
+    <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
 
- <!-- Div trên -->
- <div class="top-container">
-    <div class="controls">
-        <button id="shareBtn">Share</button>
-        <button id="prepareBtn">Chuẩn bị</button> <!-- Nút Chuẩn bị -->
-        <button id="startTimerBtn">Thi đấu</button> <!-- Nút Thi đấu -->
-        <button id="stopTimerBtn">Stop</button> <!-- Giữ nguyên tên là Stop -->
-        <button id="resetTimerBtn">Reset</button>
-        <button id="saveTimeBtn">Finish</button> <!-- Nút Save Time -->
-        <div id="timer">15:00</div>
+    <!-- Div trên -->
+    <div class="top-container">
+        <div class="controls">
+            <button id="shareBtn">Share</button>
+            <button id="prepareBtn">Chuẩn bị</button> <!-- Nút Chuẩn bị -->
+            <button id="startTimerBtn">Thi đấu</button> <!-- Nút Thi đấu -->
+            <button id="stopTimerBtn">Stop</button> <!-- Giữ nguyên tên là Stop -->
+            <button id="resetTimerBtn">Reset</button>
+            <button id="saveTimeBtn">Finish</button> <!-- Nút Save Time -->
+            <div id="timer">00:00</div>
+        </div>
+
+        <div id="timeLog" class="time-log">
+            <h5>Thời gian hoàn thành</h5>
+            <div>Player 1: <span id="firstStop">0</span> Giây</div>
+            <div>Player 2: <span id="secondStop">0</span> Giây</div>
+            <div>Chênh lệch: <span id="timeDifference">0</span> Giây</div>
+        </div>
+
+        <!-- Thêm các ô nhập cho Player 1 và Player 2 ở đây -->
+        <div class="input-container">
+            <label for="player1Input">Player 1:</label>
+            <input type="number" id="player1Input" placeholder="Cost" class="short-input" />
+            <span id="player1Result"> 0 Giây</span>
+            <div class="input-container">
+                <label for="player2Input">Player 2:</label>
+                <input type="number" id="player2Input" placeholder="Cost" class="short-input" />
+                <span id="player2Result"> 0 Giây</span>
+            </div>
+        </div>
         
     </div>
-    <div id="timeLog" class="time-log">
-        <h5>Thời gian hoàn thành</h5>
-        <div>Player 1: <span id="firstStop">0</span> Giây</div>
-        <div>Player 2: <span id="secondStop">0</span> Giây</div>
-        <div>Chênh lệch: <span id="timeDifference">0</span> Giây</div>
-    </div>
-</div>
 
-<!-- Div dưới -->
-<div class="bottom-container">
-    <div class="video-container">
-        <video id="screenVideo" autoplay></video>
+    <!-- Div dưới -->
+    <div class="bottom-container">
+        <div class="video-container">
+            <video id="screenVideo" autoplay></video>
+        </div>
     </div>
-</div>
 
-  <!-- Gắn JavaScript bên ngoài -->
-  <script src="script.js"></script>
+    <!-- Gắn JavaScript bên ngoài -->
+    <script src="script.js"></script>
 </body>
+
 </html>
