@@ -1,35 +1,63 @@
+// Gắn các thư viện JavaScript của Bootstrap và Popper.js từ CDN
+const script1 = document.createElement('script');
+script1.src = "https://code.jquery.com/jquery-3.5.1.slim.min.js";
+document.body.appendChild(script1);
+
+const script2 = document.createElement('script');
+script2.src = "https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js";
+document.body.appendChild(script2);
+
+const script3 = document.createElement('script');
+script3.src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js";
+document.body.appendChild(script3);
+
+// Bạn có thể thêm các script tùy chỉnh tại đây nếu cần
+console.log("Bootstrap đã được tải thành công!");
+
+// Biến để quản lý chia sẻ màn hình
+let screenStream = null;
+
+// Lấy các phần tử HTML từ trang
+const shareBtn = document.getElementById('shareBtn');
+const screenVideo = document.getElementById('screenVideo');
+
+// Hàm chia sẻ màn hình
 async function startScreenShare() {
-    try {
-        const screenStream = await navigator.mediaDevices.getDisplayMedia({ video: true });
-        const videoElement = document.getElementById('screenVideo');
-        videoElement.srcObject = screenStream;
+  try {
+    // Yêu cầu chia sẻ màn hình từ người dùng
+    screenStream = await navigator.mediaDevices.getDisplayMedia({
+      video: {
+        cursor: "always" // Hiển thị con trỏ chuột khi chia sẻ
+      },
+      audio: false // Bạn có thể thêm audio nếu cần
+    });
+    
+    // Gán stream vào video player
+    screenVideo.srcObject = screenStream;
+    
+    // Khi người dùng dừng chia sẻ màn hình, tắt video
+    screenStream.getVideoTracks()[0].addEventListener('ended', () => {
+      stopScreenShare();
+    });
 
-        // Tự động phát video khi chia sẻ màn hình
-        videoElement.play();
-
-        // Thiết lập lắng nghe sự kiện visibility
-        document.addEventListener('visibilitychange', () => {
-            if (document.visibilityState === 'visible') {
-                videoElement.play(); // Phát video khi tab trở lại
-            } else {
-                videoElement.pause(); // Tạm dừng video khi tab không hiển thị
-            }
-        });
-        
-        // Tự động điều chỉnh kích thước video
-        const resizeVideo = () => {
-            videoElement.style.width = `${window.innerWidth}px`;
-            videoElement.style.height = `${window.innerHeight}px`;
-        };
-
-        // Gọi hàm điều chỉnh kích thước khi cửa sổ thay đổi kích thước
-        window.addEventListener('resize', resizeVideo);
-        resizeVideo(); // Gọi ngay lập tức để thiết lập kích thước ban đầu
-
-    } catch (err) {
-        console.error("Error sharing screen: ", err);
-    }
+    console.log("Bắt đầu chia sẻ màn hình");
+  } catch (err) {
+    console.error("Không thể chia sẻ màn hình:", err);
+  }
 }
+
+// Hàm dừng chia sẻ màn hình
+function stopScreenShare() {
+  if (screenStream) {
+    let tracks = screenStream.getTracks();
+    tracks.forEach(track => track.stop());
+    screenVideo.srcObject = null; // Tắt video stream
+    console.log("Dừng chia sẻ màn hình");
+  }
+}
+
+// Thêm sự kiện click vào nút Share
+shareBtn.addEventListener('click', startScreenShare);
 
 let interval; // Biến toàn cục để lưu trữ interval
 let initialDuration; // Lưu trữ thời gian ban đầu để reset
@@ -87,31 +115,34 @@ function resetTimer() {
 }
 
 function saveTime() {
-    if (firstStopTime === 0) {
-        // Lưu lần 1
-        firstStopTime = Math.floor(document.getElementById('timer').textContent.split(':')[0]) * 60 + 
-                        parseInt(document.getElementById('timer').textContent.split(':')[1]) - 900;
-        document.getElementById('firstStop').textContent = Math.abs(firstStopTime); // Sử dụng Math.abs để ẩn dấu trừ
-    } else if (secondStopTime === 0) {
-        // Lưu lần 2
-        secondStopTime = Math.floor(document.getElementById('timer').textContent.split(':')[0]) * 60 + 
-                         parseInt(document.getElementById('timer').textContent.split(':')[1]) - 900;
-        document.getElementById('secondStop').textContent = Math.abs(secondStopTime); // Sử dụng Math.abs để ẩn dấu trừ
-  
-        // Tính và cập nhật sự khác biệt
-        const timeDifference = firstStopTime - secondStopTime;
-        document.getElementById('timeDifference').textContent = Math.abs(timeDifference); // Sử dụng Math.abs để ẩn dấu trừ
-    }
+  if (firstStopTime === 0) {
+      // Lưu lần 1
+      firstStopTime = Math.floor(document.getElementById('timer').textContent.split(':')[0]) * 60 + 
+                      parseInt(document.getElementById('timer').textContent.split(':')[1]) - 900;
+      document.getElementById('firstStop').textContent = Math.abs(firstStopTime); // Sử dụng Math.abs để ẩn dấu trừ
+  } else if (secondStopTime === 0) {
+      // Lưu lần 2
+      secondStopTime = Math.floor(document.getElementById('timer').textContent.split(':')[0]) * 60 + 
+                       parseInt(document.getElementById('timer').textContent.split(':')[1]) - 900;
+      document.getElementById('secondStop').textContent = Math.abs(secondStopTime); // Sử dụng Math.abs để ẩn dấu trừ
+
+      // Tính và cập nhật sự khác biệt
+      const timeDifference = firstStopTime - secondStopTime;
+      document.getElementById('timeDifference').textContent = Math.abs(timeDifference); // Sử dụng Math.abs để ẩn dấu trừ
   }
-  
+}
+
 
 // Thêm sự kiện cho các nút
+document.getElementById('prepareBtn').addEventListener('click', function() {
+    startTimer(5); // Khởi động đồng hồ 5 phút
+});
+
 document.getElementById('startTimerBtn').addEventListener('click', function() {
-    startTimer(15); 
+    startTimer(15); // Khởi động đồng hồ 15 phút
 });
 
 document.getElementById('stopTimerBtn').addEventListener('click', stopTimer); // Thay đổi để chỉ tạm dừng
 document.getElementById('resetTimerBtn').addEventListener('click', resetTimer);
 document.getElementById('saveTimeBtn').addEventListener('click', saveTime);
-document.getElementById('shareBtn').addEventListener('click', startScreenShare);
-document.getElementById('resizeBtn').addEventListener('click', resizeVideo); // Thêm sự kiện cho nút Resize
+
