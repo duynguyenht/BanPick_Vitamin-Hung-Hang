@@ -91,18 +91,19 @@ function saveTime() {
         // Lưu lần 1
         firstStopTime = Math.floor(document.getElementById('timer').textContent.split(':')[0]) * 60 + 
                         parseInt(document.getElementById('timer').textContent.split(':')[1]) - 900;
-        document.getElementById('firstStop').textContent = firstStopTime; // Cập nhật hiển thị
+        document.getElementById('firstStop').textContent = Math.abs(firstStopTime); // Sử dụng Math.abs để ẩn dấu trừ
     } else if (secondStopTime === 0) {
         // Lưu lần 2
         secondStopTime = Math.floor(document.getElementById('timer').textContent.split(':')[0]) * 60 + 
                          parseInt(document.getElementById('timer').textContent.split(':')[1]) - 900;
-        document.getElementById('secondStop').textContent = secondStopTime; // Cập nhật hiển thị
-
+        document.getElementById('secondStop').textContent = Math.abs(secondStopTime); // Sử dụng Math.abs để ẩn dấu trừ
+  
         // Tính và cập nhật sự khác biệt
         const timeDifference = firstStopTime - secondStopTime;
-        document.getElementById('timeDifference').textContent = timeDifference < 0 ? 0 : timeDifference; // Đảm bảo không âm
+        document.getElementById('timeDifference').textContent = Math.abs(timeDifference); // Sử dụng Math.abs để ẩn dấu trừ
     }
-}
+  }
+  
 
 // Thêm sự kiện cho các nút
 document.getElementById('startTimerBtn').addEventListener('click', function() {
