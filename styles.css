@@ -60,13 +60,13 @@ body {
     width: 1280px;
     /* Chiều rộng mặc định của hình chữ nhật */
     height: 100px;
-    background-color: rgba(231, 105, 47, 0.0);
+    background-color: rgba(206, 72, 10, 0);
     border-radius: 8px;
     /* Tùy chọn bo tròn các góc */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: 0 0 10px rgba(196, 7, 7, 0.7);
     /* Đổ bóng */
     resize: both;
     /* Cho phép thay đổi kích thước theo cả hai chiều */
@@ -82,7 +82,16 @@ body {
     /* Khoảng cách giữa 2 chữ */
     /* Có thể điều chỉnh vị trí bằng margin hoặc padding */
     color: white;
+    font-family: 'Comic Sans', cursive; /* Font chính và font dự phòng */
+    color: rgb(68, 227, 20); /* Màu chữ chính */
+    text-shadow: 
+      -2px -2px 0 #000,  
+       2px -2px 0 #000,
+      -2px  2px 0 #000,
+       2px  2px 0 #000; /* Màu viền */
 }
+
+  
 
 .ban2 {
     display: inline-block;
@@ -90,6 +99,13 @@ body {
     /* Khoảng cách giữa 2 chữ */
     /* Có thể điều chỉnh vị trí bằng margin hoặc padding */
     color: white;
+    font-family: 'Comic Sans', cursive; /* Font chính và font dự phòng */
+    color: rgb(68, 227, 20); /* Màu chữ chính */
+    text-shadow: 
+      -2px -2px 0 #000,  
+       2px -2px 0 #000,
+      -2px  2px 0 #000,
+       2px  2px 0 #000; /* Màu viền */
 }
 
 
@@ -453,20 +469,6 @@ body {
 
 .grid-item {
 
-    /*border: px solid #ccc;
-    padding: 20px;
-    /* Padding bên trong khung 
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    width: 250px;
-    /* Đặt chiều rộng cụ thể hoặc auto nếu không cần 
-    height: 77px;
-    /* Đặt chiều cao cụ thể 
-    margin: px 0;
-    /* Khoảng cách trên và dưới giữa các khung 
-    box-sizing: border-box;
-     Đảm bảo padding không làm thay đổi kích thước */
     padding: 20px;
     /* Padding bên trong khung */
     text-align: center;
